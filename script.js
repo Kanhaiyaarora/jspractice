@@ -76,8 +76,19 @@
 //  }
 // })
 
-let h1 = document.querySelector("h1");
-window.addEventListener("keydown", function (dets) {
-  if (dets.key === " ") h1.innerText = "space";
-  else h1.textContent = dets.key;
+// let h1 = document.querySelector("h1");
+// window.addEventListener("keydown", function (dets) {
+//   if (dets.key === " ") h1.innerText = "space";
+//   else h1.textContent = dets.key;
+// });
+
+let inpfile = document.querySelector("#inpfile");
+
+let btn = document.querySelector("#btn");
+btn.addEventListener("click", function () {
+  inpfile.click();
+});
+
+inpfile.addEventListener("change", function (dets) {
+  btn.textContent = dets.target.files[0].name;
 });

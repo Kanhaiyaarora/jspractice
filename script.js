@@ -11,12 +11,13 @@
 // document.getElementById
 // document.getElementsByClassName
 
-let text = document.querySelector("h1");
+// let text = document.querySelector("h1");
 // text.textContent = ("text change");
-text.innerHTML = "<i>hello<i>";
+// text.innerHTML = "<i>hello<i>";
 // we can write html in innerHTML and we can change text through innerText,innerContent/
-let link = document.querySelector("a");
-link.href = "https://www.google.com";
+
+// let link = document.querySelector("a");
+// link.href = "https://www.google.com";
 
 // let img = document.querySelector("img")
 // img.src = ("https://images.pexels.com/photos/18884939/pexels-photo-18884939.jpeg")
@@ -40,37 +41,43 @@ link.href = "https://www.google.com";
 // --> Element create kro fir usme content add kro uske baad screen pr append(show) kro
 // 1.createElement 2. append 3. removeChild 4.prepend 5.appendChild
 
-let h1 = document.createElement("h1");
-h1.textContent = "Dom manipulation";
-document.body.append(h1);
+// let h1 = document.createElement("h1");
+// h1.textContent = "Dom manipulation";
+// document.body.append(h1);
 
-link.remove();
+// link.remove();
 
 //  JS se css change krna
 
-let hello = document.querySelector("h1");
-hello.style.color = "blue";
-hello.style.fontSize = "3rem";
-hello.style.textTransform = "uppercase";
+// let hello = document.querySelector("h1");
+// hello.style.color = "blue";
+// hello.style.fontSize = "3rem";
+// hello.style.textTransform = "uppercase";
 
-let para = document.querySelectorAll("p");
-para.forEach(function (elem) {
-  elem.style.color = "purple";
-});
+// let para = document.querySelectorAll("p");
+// para.forEach(function (elem) {
+//   elem.style.color = "purple";
+// });
 
-hello.addEventListener("click", function (delss) {
-  hello.style.color = "red";
-});
-hello.addEventListener("mouseover", function () {
-  hello.style.color = "lightseagreen";
-});
-hello.addEventListener("mouseout", function (dels) {
-  hello.style.color = "blue";
-  // console.log(dels); 
-});
+// hello.addEventListener("click", function (delss) {
+//   hello.style.color = "red";
+// });
+// hello.addEventListener("mouseover", function () {
+//   hello.style.color = "lightseagreen";
+// });
+// hello.addEventListener("mouseout", function (dels) {
+//   hello.style.color = "blue";
+//   // console.log(dels);
+// });
 
-let inp = document.querySelector("input").addEventListener("input",function(dets){
- if(dets.data !== null){
-  console.log(dets.data)
- }
-})
+// let inp = document.querySelector("input").addEventListener("input",function(dets){
+//  if(dets.data !== null){
+//   console.log(dets.data)
+//  }
+// })
+
+let h1 = document.querySelector("h1");
+window.addEventListener("keydown", function (dets) {
+  if (dets.key === " ") h1.innerText = "space";
+  else h1.textContent = dets.key;
+});

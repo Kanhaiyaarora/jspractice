@@ -1,33 +1,18 @@
 // DOM Manipulation
 // 1. js se html ka element select karna by using getElementById, getElementsbyClassName, querySelector,querySelectorAll
-// 2. text badalna
-// 3. html badalna
-// 4. css badalna
-// 5. attribute badalna
+// 2. text badalna (innerText,textContent)
+// 3. html badalna (innerHTML)
+// 4. css badalna(elem.style.color = "red")
+// 5. attribute badalna (getAttribute,setAttribute)
 // event listeners add karna
 
-// 1st question
-
-// for(let i = 1; i<=10;i++){
-//   console.log(i)
-// }
-
-// 2nd question
-
-// for(let i =1;i<=20;i++){
-//   if(i%2===0){
-//     console.log(`${i} is Even`)
-//   }
-//   else{
-//     console.log(`${i} is Odd`)
-//   }
-
-// }
-
-// innerHTML,innerText,textContent
+//  document.querySelector
+// document.querySelectorAll
+// document.getElementById
+// document.getElementsByClassName
 
 let text = document.querySelector("h1");
-// text.textContent = ("i don't give a fuck champion");
+// text.textContent = ("text change");
 text.innerHTML = "<i>hello<i>";
 // we can write html in innerHTML and we can change text through innerText,innerContent/
 let link = document.querySelector("a");
@@ -50,3 +35,42 @@ link.href = "https://www.google.com";
 // img.removeAttribute("src");
 
 // link.setAttribute("href", "https://www.google.com");
+
+// Dynamic Dom manipulation
+// --> Element create kro fir usme content add kro uske baad screen pr append(show) kro
+// 1.createElement 2. append 3. removeChild 4.prepend 5.appendChild
+
+let h1 = document.createElement("h1");
+h1.textContent = "Dom manipulation";
+document.body.append(h1);
+
+link.remove();
+
+//  JS se css change krna
+
+let hello = document.querySelector("h1");
+hello.style.color = "blue";
+hello.style.fontSize = "3rem";
+hello.style.textTransform = "uppercase";
+
+let para = document.querySelectorAll("p");
+para.forEach(function (elem) {
+  elem.style.color = "purple";
+});
+
+hello.addEventListener("click", function (delss) {
+  hello.style.color = "red";
+});
+hello.addEventListener("mouseover", function () {
+  hello.style.color = "lightseagreen";
+});
+hello.addEventListener("mouseout", function (dels) {
+  hello.style.color = "blue";
+  // console.log(dels); 
+});
+
+let inp = document.querySelector("input").addEventListener("input",function(dets){
+ if(dets.data !== null){
+  console.log(dets.data)
+ }
+})

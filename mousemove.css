@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  padding: 100px;
+  position: relative;
+  display: flex;
+}
+.main div {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  outline: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  transform: translate(-50%, -50%);
+  box-shadow: inset();
+}

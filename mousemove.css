@@ -16,7 +16,7 @@ html {
   position: relative;
   display: flex;
 }
-.main div {
+.main #circle {
   width: 100px;
   height: 100px;
   background-color: transparent;
@@ -25,5 +25,5 @@ html {
   position: absolute;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   transform: translate(-50%, -50%);
-  box-shadow: inset();
+  box-shadow: inset 4px 4px 10px rgba(255, 255, 255, 1);
 }

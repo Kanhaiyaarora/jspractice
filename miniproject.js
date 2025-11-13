@@ -34,7 +34,6 @@ form.addEventListener("submit", function (event) {
   card.appendChild(profile);
   card.append(h1, h3, p);
   cardwrapper.appendChild(card);
-  console.log(main);
 
   inputs.forEach(function (elem) {
     if (elem.type !== "submit") {

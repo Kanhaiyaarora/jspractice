@@ -1,3 +1,5 @@
+// Debouncing - User baar-baar event trigger kare, par function sirf ek hi baar chale — jab user ruk jaaye.
+
 let input = document.querySelector("input");
 
 function debounce(fnc, delay) {

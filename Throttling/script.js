@@ -1,3 +1,5 @@
+//  Throttling - User baar-baar event trigger kare, par function sirf fixed interval pr chale — function runs at fixed interval(delay)
+
 let input = document.querySelector("input");
 
 function throttle(fnc, delay) {
